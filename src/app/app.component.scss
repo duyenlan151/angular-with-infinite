@@ -1,0 +1,25 @@
+.container {
+  @apply max-w-screen-xl mx-auto grid grid-cols-1 gap-4 p-4;
+}
+
+.header {
+  &__img {
+    @apply max-w-[15rem];
+  }
+
+  &__title {
+    @apply text-5xl font-bold text-white mt-4 mb-2;
+  }
+}
+
+.block {
+  @apply text-sm w-full rounded-sm bg-black-200 p-4;
+
+  &__link {
+    @apply border-b text-gray-100 opacity-50;
+
+    &--mt {
+      @apply mt-2;
+    }
+  }
+}

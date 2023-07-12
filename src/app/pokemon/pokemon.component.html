@@ -1,0 +1,20 @@
+<div *ngIf="pokemonData" class="pokemon-list">
+  <div *ngFor="let pokemon of pokemonData" class="pokemon__item">
+
+    <div class="pokemon__image">
+      <!-- <img [src]="pokemon.name | imageUrl" [alt]="pokemon.url" /> -->
+      <img [src]="pokemon?.sprites?.other?.dream_world?.front_default || ''" [alt]="pokemon.url" />
+    </div>
+    <div class="pokemon__content">
+      <div class="pokemon__content--header">
+        <div class="pokemon__image--sm">
+          <img [src]="pokemon?.sprites?.other?.dream_world?.front_default || ''" [alt]="pokemon.url" />
+        </div>
+        <div class="pokemon__content--name">{{ pokemon.name }}</div>
+      </div>
+
+      <!-- <div class="pokemon__name">{{ pokemon.name }}</div> -->
+      <!-- <div class="pokemon__name">{{ pokemon.name }}</div> -->
+    </div>
+  </div>
+</div>

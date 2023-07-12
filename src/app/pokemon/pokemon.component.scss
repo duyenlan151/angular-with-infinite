@@ -1,0 +1,33 @@
+.pokemon {
+  &-list {
+    @apply mt-4 grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4;
+  }
+
+  &__item {
+    @apply bg-black-200;
+  }
+
+  &__content {
+    @apply p-3 border-t border-zinc-800 text-sm;
+
+    &--header {
+      @apply flex items-center;
+    }
+
+    &--name {
+      @apply text-sm capitalize;
+    }
+  }
+
+  &__image {
+    @apply w-full h-[9rem] p-6;
+
+    &--sm {
+      @apply h-[1rem] mr-2;
+    }
+  }
+}
+
+img {
+  @apply object-contain w-full h-full
+}
