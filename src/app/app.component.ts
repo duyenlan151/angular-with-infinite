@@ -39,8 +39,8 @@ export class AppComponent {
     );
   }
 
-  onNearEndScroll(): void {
+  async onNearEndScroll() {
     this.page += 1;
-    this.getPokemonData(this.page);
+    await this.getPokemonData(this.page);
   }
 }

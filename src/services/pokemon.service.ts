@@ -13,7 +13,7 @@ export class PokemonService {
   constructor(private http: HttpClient) { }
 
   getListPokemon(page: number = 1, offset: number = DEFAULT_OFFSET): Observable<DataPokemonsModel> {
-    return this.http.get<DataPokemonsModel>(`${this.apiUrl}?limit=${page * DEFAULT_LIMIT}&offset=${offset}`);
+    return this.http.get<DataPokemonsModel>(`${this.apiUrl}?limit=${page * DEFAULT_LIMIT}&offset=${(page - 1)  * DEFAULT_LIMIT}`);
   };
 
   getPokemon(url: string): Observable<PokemonModel> {
