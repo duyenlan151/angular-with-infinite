@@ -4,7 +4,7 @@
   }
 
   &__item {
-    @apply bg-black-200;
+    @apply bg-black-200 cursor-pointer;
   }
 
   &__content {

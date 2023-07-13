@@ -20,8 +20,8 @@ export class AppComponent {
     this.getPokemonData();
   }
 
-  getPokemonData(): void {
-    this.pokemonService.getListPokemon().subscribe(
+  getPokemonData(page: number = 1): void {
+    this.pokemonService.getListPokemon(page).subscribe(
       (data) => {
         // Map data results
         data?.results.forEach((pokemon: PokemonModel) => {
@@ -37,5 +37,10 @@ export class AppComponent {
         console.log(error);
       }
     );
+  }
+
+  onNearEndScroll(): void {
+    this.page += 1;
+    this.getPokemonData(this.page);
   }
 }
