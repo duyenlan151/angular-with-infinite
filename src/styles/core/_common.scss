@@ -1,0 +1,83 @@
+.background-type{ @apply bg-type; }
+
+.background-normal{ @apply bg-normal; }
+
+.background-fighting{ @apply bg-fighting; }
+
+.background-flying{ @apply bg-flying; }
+
+.background-ground{ @apply bg-ground; }
+
+.background-poison{ @apply bg-poison; }
+
+.background-rock{ @apply bg-rock; }
+
+.background-bug{ @apply bg-bug; }
+
+.background-ghost{ @apply bg-ghost; }
+
+.background-steel{ @apply bg-steel; }
+
+.background-fire{ @apply bg-fire; }
+
+.background-water{ @apply bg-water; }
+
+.background-grass{ @apply bg-grass; }
+
+.background-electric{ @apply bg-electric; }
+
+.background-psychic{ @apply bg-psychic; }
+
+.background-ice{ @apply bg-ice; }
+
+.background-dragon{ @apply bg-dragon; }
+
+.background-dark{ @apply bg-dark; }
+
+.background-fairy{ @apply bg-fairy; }
+
+.background-pokeball {
+  @apply w-[1.5rem] h-[1.5rem];;
+  background-image: url('/assets/images/pokeball-01.svg');
+  background-size: cover;
+}
+
+// Text
+
+.txt-type{ @apply text-type; }
+
+.txt-normal{ @apply text-normal; }
+
+.txt-fighting{ @apply text-fighting; }
+
+.txt-flying{ @apply text-flying; }
+
+.txt-ground{ @apply text-ground; }
+
+.txt-poison{ @apply text-poison; }
+
+.txt-rock{ @apply text-rock; }
+
+.txt-bug{ @apply text-bug; }
+
+.txt-ghost{ @apply text-ghost; }
+
+.txt-steel{ @apply text-steel; }
+
+.txt-fire{ @apply text-fire; }
+
+.txt-water{ @apply text-water; }
+
+.txt-grass{ @apply text-grass; }
+
+.txt-electric{ @apply text-electric; }
+
+.txt-psychic{ @apply text-psychic; }
+
+.txt-ice{ @apply text-ice; }
+
+.txt-dragon{ @apply text-dragon; }
+
+.txt-dark{ @apply text-dark; }
+
+.txt-fairy{ @apply text-fairy; }

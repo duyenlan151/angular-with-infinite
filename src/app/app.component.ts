@@ -24,9 +24,9 @@ export class AppComponent {
     this.pokemonService.getListPokemon(page).subscribe(
       (data) => {
         // Map data results
-        data?.results.forEach((pokemon: PokemonModel) => {
+        data?.results.forEach((pokemon: PokemonsModel) => {
           // Get info pokemon by url
-          this.pokemonService.getPokemon(pokemon.url).subscribe((data) => {
+          this.pokemonService.getPokemon(pokemon.name).subscribe((data) => {
             // Push data pokemon into array
             this.pokemonData$.push({ ...pokemon, ...data });
             // console.log('this.pokemonData$: ', this.pokemonData$)
@@ -40,7 +40,13 @@ export class AppComponent {
   }
 
   async onNearEndScroll() {
-    this.page += 1;
+    this.page++;
+    await this.getPokemonData(this.page);
+  }
+
+  async loadMoreItems() {
+    console.log('load more');
+    this.page++;
     await this.getPokemonData(this.page);
   }
 }

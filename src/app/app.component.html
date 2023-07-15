@@ -1,6 +1,6 @@
 <div class="container">
   <div class="header">
-    <img class="header__img" src="./../assets/images/pikachu.png" alt="./../assets//images/pikachu.png" />
+    <img class="header__img" src="/assets/images/pikachu.svg" alt="/assets//images/pikachu.png" />
     <h1 class="header__title">Notion Pokédex</h1>
   </div>
   <div class="block">
@@ -14,5 +14,6 @@
       | <a href="https://thomasjfrank.com/notion-api-crash-course/"><span class="block__link">Learn the Notion API</span></a>
       | <a href="https://thomasjfrank.com/templates/"><span class="block__link">Templates</span></a></div>
   </div>
-  <app-pokemon appScrollNearEnd (nearEnd)="onNearEndScroll()" [pokemonData]="pokemonData$"></app-pokemon>
+  <app-pokemon appScrollNearEnd (scrolled)="onNearEndScroll()" [pokemonData]="pokemonData$"></app-pokemon>
+  <button class="btn-loadmore" (click)="onNearEndScroll()">Load more</button>
 </div>

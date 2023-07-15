@@ -1,26 +1,74 @@
 .pokemon {
   &-list {
-    @apply mt-4 grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4;
+    @apply mt-4 grid justify-center xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4;
+  }
+
+  &__title {
+    @apply py-3 font-bold text-center;
   }
 
   &__item {
-    @apply bg-black-200 cursor-pointer;
+    @apply cursor-pointer relative p-1;
+  }
+
+  &__pokeball {
+    @apply absolute -top-14 right-2 w-[65%] h-[65%];
+    z-index: 0;
   }
 
   &__content {
-    @apply p-3 border-t border-zinc-800 text-sm;
+    @apply p-3 pt-14 -mt-12 text-sm bg-white text-black rounded;
+    box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
 
     &--header {
-      @apply flex items-center;
+      @apply text-center;
     }
 
     &--name {
-      @apply text-sm capitalize;
+      @apply flex justify-between px-2 mt-2 pb-8 text-base tracking-wide font-bold capitalize;
+
+      span:nth-child(2) {
+        @apply flex items-center;
+
+        span {
+          @apply ml-2;
+        }
+      }
+    }
+  }
+
+  &__types {
+    @apply text-center;
+  }
+
+  &__about {
+    @apply mt-2;
+  }
+
+  &__desc {
+    @apply text-grayscale-dark text-xs pt-6 pb-1 tracking-normal leading-4;
+  }
+
+  &__stats {
+    &--item {
+      @apply flex items-center;
+    }
+
+    &--header {
+      @apply flex items-center justify-between mr-2 flex-[26%] max-w-[5rem];
+
+      h6 {
+        @apply text-xs font-bold text-ellipsis overflow-hidden flex-1 whitespace-nowrap border-r mr-2 py-[.125rem] min-w-[2.8125rem] max-w-[2.8125rem];
+      }
+
+      p {
+        @apply text-[.6875rem] text-ellipsis overflow-hidden whitespace-nowrap;
+      }
     }
   }
 
   &__image {
-    @apply w-full h-[9rem] p-6;
+    @apply w-full h-[9.5rem] px-3 z-10;
 
     &--sm {
       @apply h-[1rem] mr-2;
@@ -29,5 +77,33 @@
 }
 
 img {
-  @apply object-contain w-full h-full
+  @apply object-contain w-full h-full;
+}
+
+.about {
+  @apply mt-3 text-[.6875rem] grid grid-cols-3 gap-2;
+
+  &__item {
+    @apply flex flex-col items-center text-center border-r capitalize;
+
+    &--bordernone {
+      @apply border-none;
+    }
+
+    &--content {
+      @apply flex items-end justify-center text-black;
+
+      svg {
+        @apply mr-1 pb-[.25rem];
+      }
+    }
+
+    &--title {
+      @apply text-grayscale-medium mt-auto;
+    }
+
+    &--label {
+      @apply text-black;
+    }
+  }
 }

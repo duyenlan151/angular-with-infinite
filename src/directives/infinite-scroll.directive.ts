@@ -8,13 +8,20 @@ export class InfiniteScrollDirective {
 
   constructor(private elementRef: ElementRef) { }
 
-  @HostListener('scroll', ['$event'])
-  onScroll(event: Event): void {
-    const element = event.target as HTMLElement;
-    const atBottom = element.scrollHeight - element.scrollTop === element.clientHeight;
+  @HostListener('scroll', ['$event.target'])
+  onScroll(element: HTMLElement): void {
+    const atBottom = this.isAtBottom(element);
 
     if (atBottom) {
       this.reachedBottom.emit();
     }
+  }
+
+  private isAtBottom(element: HTMLElement): boolean {
+    const scrollTop = element.scrollTop;
+    const scrollHeight = element.scrollHeight;
+    const clientHeight = element.clientHeight;
+
+    return scrollTop + clientHeight >= scrollHeight;
   }
 }

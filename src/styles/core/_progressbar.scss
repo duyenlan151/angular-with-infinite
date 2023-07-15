@@ -1,0 +1,53 @@
+.progress {
+
+  &-bar {
+    @apply relative py-[.1875rem] w-full rounded overflow-hidden;
+
+    &--opacity {
+      @apply absolute top-1/2 left-0 transform -translate-y-1/2 w-full h-full opacity-20;
+    }
+
+    &--inner {
+      @apply absolute top-1/2 left-0 transform -translate-y-1/2 h-full;
+    }
+
+    &--type{ @apply bg-type; }
+
+    &--normal{ @apply bg-normal; }
+
+    &--fighting{ @apply bg-fighting; }
+
+    &--flying{ @apply bg-flying; }
+
+    &--ground{ @apply bg-ground; }
+
+    &--poison{ @apply bg-poison; }
+
+    &--rock{ @apply bg-rock; }
+
+    &--bug{ @apply bg-bug; }
+
+    &--ghost{ @apply bg-ghost; }
+
+    &--steel{ @apply bg-steel; }
+
+    &--fire{ @apply bg-fire; }
+
+    &--water{ @apply bg-water; }
+
+    &--grass{ @apply bg-grass; }
+
+    &--electric{ @apply bg-electric; }
+
+    &--psychic{ @apply bg-psychic; }
+
+    &--ice{ @apply bg-ice; }
+
+    &--dragon{ @apply bg-dragon; }
+
+    &--dark{ @apply bg-dark; }
+
+    &--fairy{ @apply bg-fairy; }
+  }
+}
+

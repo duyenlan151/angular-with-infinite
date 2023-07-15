@@ -1,1 +1,1 @@
-export * from './pokemin'
+export * from './pokemon'

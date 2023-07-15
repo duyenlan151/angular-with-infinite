@@ -1,0 +1,41 @@
+.badge-group{
+  @apply px-2 rounded-xl text-center mx-1 font-bold text-[.625rem] capitalize inline-block text-white;
+}
+
+.badge-type{ @apply bg-type; }
+
+.badge-normal{ @apply bg-type; }
+
+.badge-fighting{ @apply bg-fighting; }
+
+.badge-flying{ @apply bg-flying; }
+
+.badge-ground{ @apply bg-ground; }
+
+.badge-poison{ @apply bg-poison; }
+
+.badge-rock{ @apply bg-rock; }
+
+.badge-bug{ @apply bg-bug; }
+
+.badge-ghost{ @apply bg-ghost; }
+
+.badge-steel{ @apply bg-steel; }
+
+.badge-fire{ @apply bg-fire; }
+
+.badge-water{ @apply bg-water; }
+
+.badge-grass{ @apply bg-grass; }
+
+.badge-electric{ @apply bg-electric; }
+
+.badge-psychic{ @apply bg-psychic; }
+
+.badge-ice{ @apply bg-ice; }
+
+.badge-dragon{ @apply bg-dragon; }
+
+.badge-dark{ @apply bg-dark; }
+
+.badge-fairy{ @apply bg-fairy; }

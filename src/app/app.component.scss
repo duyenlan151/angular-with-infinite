@@ -1,5 +1,5 @@
 .container {
-  @apply max-w-screen-xl mx-auto grid grid-cols-1 gap-4 p-4;
+  @apply max-w-screen-2xl mx-auto grid grid-cols-1 gap-4 p-4;
 }
 
 .header {
@@ -22,4 +22,8 @@
       @apply mt-2;
     }
   }
+}
+
+.btn-loadmore {
+  @apply rounded-sm bg-black-200 px-6 py-2 text-sm w-fit mx-auto mt-4;
 }
