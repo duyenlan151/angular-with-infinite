@@ -65,6 +65,10 @@
         @apply text-[.6875rem] text-ellipsis overflow-hidden whitespace-nowrap;
       }
     }
+
+    &--progress {
+      @apply flex-[80%];
+    }
   }
 
   &__image {
@@ -91,10 +95,10 @@ img {
     }
 
     &--content {
-      @apply flex items-end justify-center text-black;
+      @apply flex items-center justify-center text-black flex-1;
 
       svg {
-        @apply mr-1 pb-[.25rem];
+        @apply mr-1 mt-[.25rem] pb-[.25rem];
       }
     }
 

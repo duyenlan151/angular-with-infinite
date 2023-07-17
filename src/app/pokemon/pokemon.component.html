@@ -70,7 +70,7 @@
             <p>{{ stat.base_stat }}</p>
           </div>
 
-          <div class="progress-bar" role="progressbar">
+          <div class="pokemon__stats--progress progress-bar" role="progressbar">
             <div class="progress-bar--opacity" [class]="'progress-bar--'+(pokemon.types[0].type.name)"></div>
             <div class="progress-bar--inner" [class]="'progress-bar--'+(pokemon.types[0].type.name)" role="progressbar"
               [style.width]="stat.base_stat + '%'" aria-valuemin="0" aria-valuemax="100">
