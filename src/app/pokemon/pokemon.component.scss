@@ -55,7 +55,7 @@
     }
 
     &--header {
-      @apply flex items-center justify-between mr-2 flex-[26%] max-w-[5rem];
+      @apply flex items-center justify-between mr-2 flex-[30%] max-w-[5rem];
 
       h6 {
         @apply text-xs font-bold text-ellipsis overflow-hidden flex-1 whitespace-nowrap border-r mr-2 py-[.125rem] min-w-[2.8125rem] max-w-[2.8125rem];
