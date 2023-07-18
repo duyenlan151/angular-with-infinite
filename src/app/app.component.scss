@@ -1,5 +1,5 @@
 .container {
-  @apply max-w-screen-2xl mx-auto grid grid-cols-1 gap-4 p-4;
+  @apply 2xl:max-w-screen-2xl max-w-screen-xl mx-auto grid grid-cols-1 gap-4 p-4;
 }
 
 .header {
