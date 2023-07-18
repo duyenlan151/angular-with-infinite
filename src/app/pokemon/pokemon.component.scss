@@ -8,7 +8,7 @@
   }
 
   &__item {
-    @apply cursor-pointer relative p-1;
+    @apply flex flex-col overflow-hidden cursor-pointer relative p-1;
   }
 
   &__pokeball {
@@ -17,7 +17,7 @@
   }
 
   &__content {
-    @apply p-3 pt-14 -mt-12 text-sm bg-white text-black rounded;
+    @apply flex-1 flex flex-col p-3 pt-14 -mt-12 text-sm bg-white text-black rounded;
     box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
 
     &--header {
@@ -50,6 +50,7 @@
   }
 
   &__stats {
+    @apply flex flex-col justify-end mt-auto;
     &--item {
       @apply flex items-center;
     }
