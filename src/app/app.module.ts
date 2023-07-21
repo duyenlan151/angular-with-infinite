@@ -16,7 +16,6 @@ import { PokemonOldComponent } from './pokemon-old/pokemon-old.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonComponent,
     ImageUrlPipe,
     RandomBgColorPipe,
     InfiniteScrollDirective,
@@ -24,7 +23,13 @@ import { PokemonOldComponent } from './pokemon-old/pokemon-old.component';
     BadgePokemonPipe,
     PokemonOldComponent,
   ],
-  imports: [CommonModule, BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    PokemonComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

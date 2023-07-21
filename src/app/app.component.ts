@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { take } from 'rxjs';
 import { PokemonModel, PokemonsModel } from 'src/interfaces';
 import { PokemonService } from 'src/services/pokemon.service';
 
@@ -21,7 +22,7 @@ export class AppComponent {
   }
 
   getPokemonData(page: number = 1): void {
-    this.pokemonService.getListPokemon(page).subscribe(
+    this.pokemonService.getListPokemon(page).pipe(take(1)).subscribe(
       (data) => {
         // Map data results
         data?.results.forEach((pokemon: PokemonsModel) => {
