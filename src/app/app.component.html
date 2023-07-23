@@ -14,6 +14,5 @@
       | <a href="https://thomasjfrank.com/notion-api-crash-course/"><span class="block__link">Learn the Notion API</span></a>
       | <a href="https://thomasjfrank.com/templates/"><span class="block__link">Templates</span></a></div>
   </div>
-  <app-pokemon appScrollNearEnd (scrolled)="onNearEndScroll()" [pokemonData]="pokemonData$"></app-pokemon>
-  <button class="btn-loadmore" (click)="onNearEndScroll()">Load more</button>
+  <router-outlet></router-outlet>
 </div>

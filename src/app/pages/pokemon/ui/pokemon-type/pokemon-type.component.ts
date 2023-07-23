@@ -7,10 +7,10 @@ import { badgeColors } from 'src/shared-ui/colors';
   template: ` {{ type }} `,
   host: { class: 'badge-group', '[class]': 'hbTypeClass' },
 })
-export class PokemonType {
+export class PokemonTypeComponent {
   @Input({ required: true }) type = '';
 
-  get hbTypeClass() {
+  private get hbTypeClass() {
     return (badgeColors as Record<string, string>)[this.type];
   }
 }
