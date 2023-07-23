@@ -10,7 +10,7 @@ import { badgeColors } from 'src/shared-ui/colors';
 export class PokemonTypeComponent {
   @Input({ required: true }) type = '';
 
-  private get hbTypeClass() {
+  get hbTypeClass() {
     return (badgeColors as Record<string, string>)[this.type];
   }
 }
