@@ -59,15 +59,5 @@ describe('ListPokemonComponent', () => {
       component.onNearEndScroll();
       expect(component.page).toEqual(2);
     });
-    // it('should call getListPeople', () => {
-    //   expect(pokemonServiceSpy.getListPeople)
-    //     .toHaveBeenCalledWith({page: component.page, pageSize: component.pageSize});
-    // });
-    // it('should total equal 100', () => {
-    //   expect(component.total).toEqual(SAMPLE_TOTAL);
-    // });
-    // it('should list of person have value', () => {
-    //   expect(component.peoples).toEqual(SAMPLE_PAGINATION.peoples);
-    // });
   })
 });
