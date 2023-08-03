@@ -16,6 +16,16 @@ export class ListPokemonComponent {
   private destroyed$ = new Subject();
   pokemonData$: PokemonsModel[] = [];
 
+  // Base stats
+  _textStats = {
+    hp: 'HP',
+    attack: 'ATK',
+    defense: 'DEF',
+    'special-attack': 'SATK',
+    'special-defense': 'SDEF',
+    speed: 'SPD',
+  }
+
   // pagegination
   page = 1;
 
@@ -23,6 +33,10 @@ export class ListPokemonComponent {
 
   ngOnInit(): void {
     this.getPokemonData();
+  }
+
+  getTitleName(key: string | undefined): string {
+    return this._textStats[key as keyof typeof this._textStats];
   }
 
   private getPokemonData(page: number = 1): void {

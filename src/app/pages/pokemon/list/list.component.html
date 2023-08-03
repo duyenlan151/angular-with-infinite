@@ -67,7 +67,7 @@
         <div class="pokemon__title" [class]="'txt-'+(pokemon.types[0].type.name)">Base Stats</div>
         <div *ngFor="let stat of pokemon.stats" class="pokemon__stats--item">
           <div class="pokemon__stats--header">
-            <!-- <h6 [class]="'txt-'+(pokemon.types[0].type.name)">{{ getTitleName(stat.stat.name) }}</h6> -->
+            <h6 [class]="'txt-'+(pokemon.types[0].type.name)">{{ getTitleName(stat?.stat?.name) }}</h6>
             <p>{{ stat.base_stat }}</p>
           </div>
 
